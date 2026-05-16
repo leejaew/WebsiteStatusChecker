@@ -93,5 +93,4 @@ one of them re-opens an SSRF hole.
 
 ## License
 
-No license has been declared. Add one (for example, MIT or Apache 2.0)
-if you intend to make the project open source.
+Released under the [MIT License](LICENSE).
