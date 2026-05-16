@@ -38,8 +38,9 @@ htmlcov/
 .env.*.local
 
 # Replit-managed runtime/agent state.
-# NOTE: We intentionally KEEP `.replit` tracked — it's the deployment
-# config and is required for the project to publish correctly.
+# The repo is intentionally Replit-agnostic — `.replit` stays on disk
+# locally (the deployment needs it) but is not version-controlled.
+.replit
 .local/
 .agents/
 .cache/
