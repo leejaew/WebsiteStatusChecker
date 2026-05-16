@@ -1,0 +1,51 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+# Legacy bundled venv from the old Replit Python template
+venv (deactivated)/
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Test / coverage artifacts
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environment files (never commit secrets)
+.env
+.env.local
+.env.*.local
+
+# Replit-managed runtime/agent state.
+# NOTE: We intentionally KEEP `.replit` tracked — it's the deployment
+# config and is required for the project to publish correctly.
+.local/
+.agents/
+.cache/
+.upm/
+.pythonlibs/
+.breakpoints
+
+# Legacy template documentation (no longer applicable)
+VENV.md

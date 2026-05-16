@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Status Checker</title>
+    <style>
+        body { font-family: sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; }
+        h1 { font-size: 1.5rem; }
+        input[type=text] { width: 100%; padding: 8px; font-size: 1rem; box-sizing: border-box; }
+        button { margin-top: 10px; padding: 8px 20px; font-size: 1rem; cursor: pointer; }
+        .result { margin-top: 24px; font-size: 1.1rem; }
+        .up { color: green; }
+        .down { color: red; }
+        .error { color: #b00; margin-top: 16px; }
+    </style>
+</head>
+<body>
+    <h1>Website Status Checker</h1>
+    <form method="post" novalidate>
+        <input type="text"
+               name="url"
+               placeholder="e.g. example.com"
+               value="{{ url }}"
+               maxlength="2000"
+               required
+               autocomplete="off">
+        <br>
+        <button type="submit">Check Status</button>
+    </form>
+    {# Either an error or a result is shown — never both. #}
+    {% if error %}
+        <div class="error">{{ error }}</div>
+    {% elif result %}
+        <div class="result">
+            <strong>{{ url }}:</strong>
+            <span class="{{ 'up' if result.is_up else 'down' }}">{{ result.label }}</span>
+        </div>
+    {% endif %}
+</body>
+</html>
